@@ -119,6 +119,4 @@ end
 # puts "OPTIONS: " + options.to_json.inspect
 search = TwitterSearch.new(**options)
 
-search.json_tweets.each do |tweet|
-  puts tweet
-end
+puts '"'+search.json_tweets.to_json+'"'

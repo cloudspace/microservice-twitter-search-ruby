@@ -6,18 +6,6 @@ class TwitterSearch
     @options = args
   end
 
-  def top_urls
-    topurls = {}
-
-    urls.each do |url|
-      topurls[url] ||= 0
-      topurls[url] += 1
-    end
-
-    topurls = topurls.to_a.sort { |a, b| b[1] <=> a[1] }
-    topurls.map { |u| u[0] }
-  end
-
   def urls
     tweet_urls = []
     tweets.each do |tweet|
